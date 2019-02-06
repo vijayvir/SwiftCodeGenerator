@@ -3,8 +3,8 @@ This simple code genrate the swift code from swift object . Mainly you can use t
 
 ### How to use this 
 
-   • 1 Add class  `LeoSwiftCoder` in your code 
-  •2 It is very simple to use just pass swift object to class , It will print the `swift code` in console . 
+    • 1 Add class  `LeoSwiftCoder` in your code 
+    •2 It is very simple to use just pass swift object to class , It will print the `swift code` in console . 
 
 ```swift 
 let swiftCoder = LeoSwiftCoder()
