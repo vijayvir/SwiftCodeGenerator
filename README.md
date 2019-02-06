@@ -7,7 +7,7 @@ This simple code genrate the swift code from swift object . Mainly you can use t
 2 It is very simple to use just pass swift object to class , It will print the `swift code` in console . 
 
 ```swift 
-//let swiftCoder = LeoSwiftCoder()
-// swiftCoder.leoClassMake(withName: "UserMessages", json: json)
-//  print("Enjoy the Code ")
+let swiftCoder = LeoSwiftCoder()
+swiftCoder.leoClassMake(withName: "UserMessages", json: json)
+print("Enjoy the Code ")
 ```
