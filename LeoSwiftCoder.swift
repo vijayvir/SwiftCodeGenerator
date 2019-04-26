@@ -23,13 +23,27 @@ extension StringProtocol {
     }
 }
 class LeoSwiftCoder {
+    enum TypeOf : String {
+        
+        case Struct =  "struct"
+        case Class   =  "class"
+        
+        
+    }
+    
+    var typeOf : TypeOf = TypeOf.Class
+    
+    func withType(_ type : LeoSwiftCoder.TypeOf) -> LeoSwiftCoder {
+        typeOf = type
+        return self
+    }
     
     func leoClassMake(withName : String , json :Any) {
         switch json.self {
         case is [String : Any] :
             
             if let someJson = json as? [String : Any] {
-                print("class \(withName) {")
+                print("\(typeOf.rawValue) \(withName) {")
                 print("var serverData : [String: Any] = [:]")
                 for key in someJson.keys {
                     print( "var \(key.unCapitalizedLSC) : \(self.typeOf(send: someJson[key]! , key : key))?" )
@@ -60,7 +74,7 @@ class LeoSwiftCoder {
         case is Array<String> :
             if let someJson = json as? [String] {
                 if someJson.count > 0 {
-                    print("class \(withName) {")
+                    print("\(typeOf.rawValue) \(withName) {")
                     print("var serverData : String = \"\"")
                     
                     print("init(dict: String){")
