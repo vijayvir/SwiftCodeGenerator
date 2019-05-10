@@ -45,7 +45,9 @@ class LeoSwiftCoder {
             if let someJson = json as? [String : Any] {
                 print("\(typeOf.rawValue) \(withName) {")
                 print("var serverData : [String: Any] = [:]")
-                for key in someJson.keys {
+                for key in someJson.keys.sorted(by: { (firstKey, secondKey) -> Bool in
+                    return firstKey <= secondKey
+                }) {
                     print( "var \(key.unCapitalizedLSC) : \(self.typeOf(send: someJson[key]! , key : key))?" )
                 }
                 print("init(dict: [String: Any]){")
