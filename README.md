@@ -12,7 +12,7 @@ swiftCoder.leoClassMake(withName: "UserMessages", json: json)
 print("Enjoy the Code ")
 ```
 
-### For codable 
+## For codable 
 ```swift 
 let some = SomeDstct(name: "name",
 age: 34,
@@ -24,4 +24,44 @@ height: 3232))
 let generator = LeoSwiftCoder().withTemplate(LeoSwiftCoder.CodeTemplate.Codeable)
 generator.leoClassMake(withName: "Temp", json: some.toJsonObect())
 
+```
+it will generate following output 
+```swift 
+class Temp : Codable {
+var serverData : [String: Any] = [:]
+var age : Int?
+var className : String?
+var name : String?
+var other : Other?
+enum CodingKeys: String, CodingKey {
+case age = "age"
+case name = "name"
+case other = "other"
+case className = "className"
+}
+required init(from decoder: Decoder) throws {
+let containerL = try decoder.container(keyedBy: CodingKeys.self)
+age = try containerL.decodeIfPresent(Int.self, forKey: .age)
+name = try containerL.decodeIfPresent(String.self, forKey: .name)
+other = try containerL.decodeIfPresent(Other.self, forKey: .other)
+className = try containerL.decodeIfPresent(String.self, forKey: .className)
+}
+class Other : Codable {
+var serverData : [String: Any] = [:]
+var color : String?
+var height : Int?
+var size : String?
+enum CodingKeys: String, CodingKey {
+case size = "size"
+case color = "color"
+case height = "height"
+}
+required init(from decoder: Decoder) throws {
+let containerL = try decoder.container(keyedBy: CodingKeys.self)
+size = try containerL.decodeIfPresent(String.self, forKey: .size)
+color = try containerL.decodeIfPresent(String.self, forKey: .color)
+height = try containerL.decodeIfPresent(Int.self, forKey: .height)
+}
+}
+}
 ```
