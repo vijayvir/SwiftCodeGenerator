@@ -11,3 +11,17 @@ let swiftCoder = LeoSwiftCoder()
 swiftCoder.leoClassMake(withName: "UserMessages", json: json)
 print("Enjoy the Code ")
 ```
+
+### For codable 
+```swift 
+let some = SomeDstct(name: "name",
+age: 34,
+className: "eeee",
+other: SomeDstct.SomeOther(color: "d",
+size: "dd",
+height: 3232))
+
+let generator = LeoSwiftCoder().withTemplate(LeoSwiftCoder.CodeTemplate.Codeable)
+generator.leoClassMake(withName: "Temp", json: some.toJsonObect())
+
+```
