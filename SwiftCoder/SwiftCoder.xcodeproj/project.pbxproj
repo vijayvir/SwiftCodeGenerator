@@ -15,6 +15,7 @@
 		18FA824D228BF03500B20686 /* LeoSwiftCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA824C228BF03500B20686 /* LeoSwiftCoder.swift */; };
 		18FA824F228BF32300B20686 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA824E228BF32300B20686 /* Result.swift */; };
 		18FA8251228BF52D00B20686 /* StructToJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA8250228BF52D00B20686 /* StructToJson.swift */; };
+		18FA8253228C16A300B20686 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 18FA8252228C16A300B20686 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		18FA824C228BF03500B20686 /* LeoSwiftCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeoSwiftCoder.swift; path = ../../LeoSwiftCoder.swift; sourceTree = "<group>"; };
 		18FA824E228BF32300B20686 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		18FA8250228BF52D00B20686 /* StructToJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StructToJson.swift; sourceTree = "<group>"; };
+		18FA8252228C16A300B20686 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				18FA823A228BF01700B20686 /* AppDelegate.swift */,
 				18FA823C228BF01700B20686 /* ViewController.swift */,
 				18FA824E228BF32300B20686 /* Result.swift */,
+				18FA8252228C16A300B20686 /* README.md */,
 				18FA824C228BF03500B20686 /* LeoSwiftCoder.swift */,
 				18FA8250228BF52D00B20686 /* StructToJson.swift */,
 				18FA823E228BF01700B20686 /* Main.storyboard */,
@@ -133,6 +136,7 @@
 			files = (
 				18FA8245228BF01900B20686 /* LaunchScreen.storyboard in Resources */,
 				18FA8242228BF01900B20686 /* Assets.xcassets in Resources */,
+				18FA8253228C16A300B20686 /* README.md in Resources */,
 				18FA8240228BF01700B20686 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -30,21 +30,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-     //   let jsonData = jsonString.data(encoding: .utf8)!
+ 
+        let some = SomeDstct(name: "name",
+                             age: 34,
+                             className: "eeee",
+                             other: SomeDstct.SomeOther(color: "d",
+                                                        size: "dd",
+                                                        height: 3232))
         
-        let some = SomeDstct(name: "name", age: 34, className: "eeee", other: SomeDstct.SomeOther(color: "d", size: "dd", height: 3232))
-        
-        print(some.toJsonString())
-        
-        
-    
-        let sds : [String: Any] = ["dsa" : 423]
-        
-
-    
-         //let somee = LeoSwiftCoder().withTemplate(LeoSwiftCoder.CodeTemplate.Codeable)
-      //   somee.leoClassMake(withName: "Temp", json: some.toJsonObect())
+         let generator = LeoSwiftCoder().withTemplate(LeoSwiftCoder.CodeTemplate.Codeable)
+         generator.leoClassMake(withName: "Temp", json: some.toJsonObect())
         
         
         
